@@ -19,8 +19,8 @@ def parse_args():
                         help="Log debugging messages")
     parser.add_argument('--keyfile', default='.bismuth.key', help="Load/save file for miner secret identity", metavar='PATH')
     parser.add_argument('--max-miners', help="Maximum number of miner connections", default=1000, metavar='M')
-    parser.add_argument('-p', '--peers', help="Load/save file for found peers", default='peers.txt', metavar='PATH')
-    parser.add_argument('-l', '--ledger', help="Bismuth ledger database path", default='../Bismuth/static/ledger.db', metavar='PATH')
+    parser.add_argument('-p', '--peers', help="Load/save file for found peers", default='../bis/peers.txt', metavar='PATH')
+    parser.add_argument('-l', '--ledger', help="Bismuth ledger database path", default='../bis/static/ledger.db', metavar='PATH')
     parser.add_argument('-m', '--miners-listen', dest='miners_listen', metavar="LISTEN",
                         default='0.0.0.0:' + str(POOL_PORT), help="Listener port for miners")
     cfg = parser.parse_args()
